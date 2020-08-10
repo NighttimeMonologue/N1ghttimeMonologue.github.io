@@ -1,0 +1,530 @@
+/*
+* @Author: admin
+* @Date:   2018-07-26 14:06:59
+* @Last Modified by:   Administrator
+* @Last Modified time: 2018-07-29 17:02:37
+*/
+
+html,body{
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	font-family: '宋体'
+}
+section{
+	width: 100%;
+	height: 670px;
+	/* min-height: 600px; */
+	background: #eee;
+	position: relative;
+	/* border: 1px solid #666; */
+	box-sizing: border-box;
+	overflow: hidden;
+	background-attachment: fixed;
+	background-size: cover; 
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+h3{
+	font-size: 0.4rem;
+}
+/* index */
+#index{
+	/* height: 100%; */
+}
+.change{
+	padding-top: 5px;
+}
+.change i{
+	margin-left: 15px;
+	cursor: pointer;
+	color: #666;
+}
+.change i:hover{
+	color: #333;
+}
+.change span{
+	cursor: pointer;
+	color: #666;
+}
+.change span:hover{
+	color: #333;
+}
+/* experience */
+#experience{
+	background-image: url('../images/experience-bg.jpg');
+	background-size: 120% 120%;
+	background-position: top;
+	padding-top: 30px;
+}
+#timeline{
+	display: none;
+}
+#experience::before,#WebProject::before,#contact::before,#platform::before,#blog::before,footer::before{
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	opacity: 0.3;
+	content: ' ';
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+.my_time{
+	/* overflow: hidden; */
+	min-width: 400px;
+}
+.do{
+	position: absolute;
+	left: 90px;
+	top: 25px;
+	border: 1px solid #fff;
+	padding: 0 10px;
+	height: 50px;
+	background: #ddd;
+	opacity: 0.6;
+	border-radius: 4px;
+}
+.pointer{
+	width: 10px;
+	height: 10px;
+	transform:rotate(-45deg);
+	position: absolute;
+	left: -6px;
+	top: 20px;
+	border-top: 1px solid #fff;
+	border-left: 1px solid #fff;
+	z-index: 2;
+	background: #ddd;
+}
+.do>span{
+    padding: 0 5px;
+    position: relative;
+    /* line-height: 50px; */
+    color: #333;
+    font-size: 0.2rem;
+    top: -37px;
+}
+.aboutme{
+	margin-top: 50px;
+	color: #fff;
+	padding-top: 30px;
+	display: none;
+}
+.aboutme blockquote{
+	font-size: 0.2rem;
+}
+.aboutme h3{
+	/* text-shadow: 0 2px 1px rgba(0,0,0,0.5),0 1px 10px rgba(0,0,0,0.5); */
+}
+.aboutme p{
+	font-size: 0.3rem;
+	text-indent: 0.7rem;
+	line-height: 0.5rem;
+	word-break: break-all;
+	text-align: justify;
+}
+/* WebProject */
+#WebProject{
+	background-image: url('../images/experience-bg.jpg');
+	color: #fff;
+}
+#WebProject::before{
+	background: #fff;
+	opacity: 0.3;
+}
+.web_left{
+	padding-top: 160px;
+	overflow: hidden;
+}
+#WebProject h3{
+	margin-top: 100px;
+}
+.web_left>.web{
+	width: 38%;
+	height: 130px;
+	margin-left: 30px;
+	margin-top: 30px;
+	float: left;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	position: relative;
+	display: none;
+}
+.web img{
+	/* border: 1px solid #666; */
+	cursor: pointer;
+	float: left;
+	width: 100%;
+	height: 128px;
+}
+.web_right{
+	padding-top: 30px;
+	display: none;
+}
+.web_right h3{
+	font-size: 0.5rem;
+}
+.bigP{
+	font-size: 0.25rem;
+}
+.smallP{
+	font-size: 0.22rem;
+}
+hr{
+	padding-top: 20px;
+	height:1px;
+	border:none;
+	border-top:1px dashed #fff;
+}
+.float{
+	position: absolute;
+    border: 1px solid #ccc;
+    width: 100%;
+    left: 0px;
+    display: none;
+}
+.float1{
+    height: 100px;
+    top: -100px;
+    border-bottom: 0px;
+    border-radius: 4px 4px 0 0;
+}
+.float2{
+	height: 100px;
+	top: -100px;
+    border-bottom: 0px;
+    border-radius: 4px 4px 0 0;
+}
+.float3{
+	height: 100px;
+	bottom: -100px;
+    border-top: 0px;
+    border-radius: 0 0 4px 4px ;
+}
+.float4{
+	height: 100px;
+	bottom: -100px;
+    border-top: 0px;
+    border-radius: 0 0 4px 4px ;
+}
+/* swiper */
+#WebProject .my_swiper{
+	position: relative;
+	top: 10px;
+	padding-top: 30px;
+	height: 600px;
+	overflow: hidden;
+	visibility: hidden;
+}
+#WebProject .swiper-container {
+	width: 100%;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+#WebProject .swiper-slide {
+	/* cursor: pointer; */
+  	background-position: center;
+  	background-size: cover;
+  	width: 250px;
+ 	height: 250px;
+}
+/* platform 各大平台 */
+#platform{
+	padding-top: 50px;
+	color: #666;
+	height: 300px;
+	background-image: url('../images/bg9.jpg');
+	/* background: #fff */
+}
+#platform::before{
+	background: #ccc;
+	opacity: 0;
+}
+#platform h3{
+	color: #666;
+	margin-bottom: 50px;
+}
+#platform i{
+	display: none;
+	color: #666;
+	font-size: 0.6rem;
+}
+a:hover{
+	text-decoration: none;
+}
+#platform i:hover{
+	color: #23527c;
+}
+/* 项目经验 */
+.space{
+	padding: 20px;
+}
+#portfolio{
+	width: 100%;
+	height: 530px;
+	background-image: url('../images/bg2.jpg');
+	padding-bottom: 150px;
+}
+#portfolio h3{
+	color: #666;
+}
+#portfolio p{
+	color: #666;
+	font-size: 0.3rem;
+}
+#portfolio .filter li{
+	float: none;
+	display: inline-block;
+}
+#portfolio .overlay-container{
+	/* display: none; */
+	position: relative;
+}
+#portfolio .overlay{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.5);
+	cursor: pointer;
+	transform: scale(0.8);
+	transition: all 0.2s;
+	opacity: 0;
+}
+#portfolio .overlay i{
+	position: absolute;
+	left: 45%;
+	top: 40%;
+	font-size: 18px;
+	color: #fff;
+}
+#portfolio .overlay span{
+	position: absolute;
+	bottom: 10px;
+	font-size: 13px;
+	color: #fff;
+	text-align: center;
+	width: 100%;
+}
+#portfolio .overlay-container:hover .overlay{
+	transform: scale(1);
+	opacity: 1;
+}
+#portfolio .modal-header{
+	background:darkgray;
+	color: #fff;
+}
+#portfolio .close{
+	color: #fff;
+	opacity: 0.6;
+}
+#portfolio .nav > li.active > a{
+	color: #fff;
+}
+#portfolio .nav > li > a{
+	color: #666;
+}
+#portfolio .nav > li > a:hover{
+	background: #ccc;
+}
+/* 我发表过的文章 */
+#about{
+	width: 100%;
+	height: 450px;
+	background-image: url('../images/bg2.jpg');
+	padding-top: 40px;
+	color: #333;
+}
+#about .list-group-item{
+	background: #fff;
+	border: 2px solid #eee;
+	cursor: pointer;
+	color: #666;
+}
+.about .list-unstyled li{
+	padding: 5px 0;
+}
+.about .list-unstyled li i{
+	color:#55acee ;
+}
+.panel-default>.panel-heading{
+	padding: 0;
+}
+.panel-default>.panel-heading a{
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+    color: #fff;
+    position: relative;
+    text-decoration: none;
+    padding: 12px 15px;
+}
+.panel-default>.panel-heading a::after{
+	font-family:fontawesome;
+	content:'\f147' ;
+	position: absolute;
+	right: 15px;
+	font-size: 14px;
+	top: 35%;
+}
+.panel-default>.panel-heading a.collapsed::after{
+	content: '\f196';
+}
+.panel-default>.panel-heading a:hover{
+	background-color: #55acee;
+}
+/* 留言板 */
+#contact::before{
+	background: #fff;
+	opacity: 0.3;
+	filter: blur(200px);
+}
+#contact h3{
+	color: #333;
+	font-size: 0.4rem;
+}
+#contact {
+	color: #666;
+	background-image: url('../images/bg2.jpg');
+	height: 550px;
+	background-attachment: scroll;
+}
+#contact p{
+	font-size: 0.25rem;
+}
+#contact row{
+	font-size: 22px
+}
+#contact ul{
+	list-style: none;
+	padding: 0;
+}
+#contact ul li{
+	margin: 20px 0;
+}
+#contact .links li{
+	float: left;
+	font-size: 36px;
+	margin: 15px 23px 15px 0;
+}
+#contact .links i{
+	font-size: 0.5rem;
+	color: #666;
+}
+#contact .links i:hover{
+	color: #23527c;
+}
+#contact span{
+	padding-top: 10px;
+}
+footer::before{
+	color: #fff;
+	opacity: 0.6;
+}
+footer{
+	background: url('../images/footer.png') no-repeat ;
+	background-size: 100% 1500%;
+	font-size: 0.25rem;
+	color: #fff;
+	width: 100%;
+	height: 170px;
+	overflow: hidden;
+	position: relative;
+}
+footer p{
+	margin-top: 70px;
+}
+/* 媒体查询实现字体自适应 */
+html{
+	font-size: 64px;
+}
+@media (max-width: 2000px) {
+	html{
+		font-size: 64px;
+	}
+}
+@media (max-width: 900px) {
+	html{
+		font-size: 50px;
+	}
+}
+@media (max-width: 640px) {
+	html{
+		font-size: 42px;
+	}
+}
+@media (max-width: 320px) {
+	html{
+		font-size: 28px;
+	}
+}
+@media (max-width: 992px) {
+	#portfolio{
+		height: auto;
+	}
+	#WebProject{
+		height: 800px;
+	}
+}@media (max-width: 850px) {
+	.my_time{
+		margin:0 15%;
+	}
+	.do{
+		left: 60px;
+		width: 75%;
+	}
+}@media (max-width:767px) {
+	#about,#contact{
+		height: auto;
+		padding-bottom: 30px;
+	}
+	footer .gotop{
+		display: none;
+	}
+	#portfolio .myitem{
+		margin-left: 150px;
+		margin-right: 150px;
+	}
+}@media (max-width: 736px) {
+	.my_time{
+		margin:0;
+	}
+	.do{
+		left: 55px;
+		width: 60%;
+	}
+	#portfolio .nav > li > a {
+	    padding: 10px 8px;
+	}
+}@media (max-width: 700px) {
+	#portfolio .myitem{
+		margin-left: 100px;
+		margin-right: 100px;
+	}
+}@media (max-width: 620px) {
+	#portfolio .myitem{
+		margin-left: 80px;
+		margin-right: 80px;
+	}
+}@media (max-width: 550px) {
+	#portfolio .myitem{
+		margin-left: 50px;
+		margin-right: 50px;
+	}
+}@media (max-width: 520px) {
+	.my_time{
+		margin:0;
+	}
+	.do{
+		left: 55px;
+		width: 45%;
+	}
+	#portfolio .myitem{
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+}
